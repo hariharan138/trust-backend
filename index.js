@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser')
 const cors = require("cors")
 
 app.use(cors({
-    origin:  "https://trust-frontend-new.onrender.com/" ||'http://localhost:3000',
+    origin:  "process.env.FRONTEND_URL" ||'https://trust-frontend-new.onrender.com/',
     credentials: true
 }))
 
