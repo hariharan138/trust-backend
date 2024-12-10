@@ -33,6 +33,11 @@ app.use("/api/trust",trustRoutes )
 app.use('/api/user', userRoute)
 app.use('/api/admin', adminRoute)
 
+app.get('/', (req, res) => {
+    res.send('Server is Running');
+});
+
+
 
 app.use((err, req, res, next) => {
     console.error("Unhandled error:", err); // Log unhandled errors
